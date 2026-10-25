@@ -1,0 +1,5 @@
+otcp_scorer.py is a NumPy/SciPy port of ott.tools.conformal.OTCP from OTT-JAX
+(https://github.com/ott-jax/ott), which is distributed under the Apache License,
+Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0). The changes made in
+the port are listed in the module docstring. The rest of this repository is
+distributed under the MIT License (see LICENSE).

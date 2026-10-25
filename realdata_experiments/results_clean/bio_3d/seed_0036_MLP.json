@@ -1,0 +1,848 @@
+{
+  "dataset": "bio_3d",
+  "seed": 36,
+  "model": "MLP",
+  "split": [
+    0.5,
+    0.25,
+    0.25
+  ],
+  "alphas": [
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "targets": [
+    "RMSD",
+    "F7",
+    "F8"
+  ],
+  "features": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F9"
+  ],
+  "d": 3,
+  "p": 7,
+  "result": {
+    "seed": 36,
+    "model": "MLP",
+    "model_rmse": 0.7077627758823841,
+    "meta": {
+      "n_train": 22865,
+      "n_cal": 11432,
+      "n_cal_full": 11432,
+      "n_cal_use": 11432,
+      "n_fit": 5716,
+      "n_q": 5716,
+      "n_test": 11433,
+      "d": 3,
+      "p": 7,
+      "alphas": [
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "scorers": [
+        "Mahal",
+        "Bonferroni",
+        "Density_med2",
+        "Kernel_med2",
+        "OTCP"
+      ],
+      "display_names": {
+        "Mahal": "Mahalanobis",
+        "Bonferroni": "Bonferroni",
+        "Density_med2": "Density ($\\ell{=}\\mathrm{med}/2$)",
+        "Kernel_med2": "MKS ($\\ell{=}\\mathrm{med}/2$)",
+        "OTCP": "OT-CP (Klein et al.)"
+      },
+      "elapsed": 690.0651121139526,
+      "timings": {
+        "model_fit": 7.023001432418823,
+        "fit_Mahal": 0.0004303455352783203,
+        "score_Mahal": 0.0006365776062011719,
+        "fit_Bonferroni": 0.00039386749267578125,
+        "score_Bonferroni": 0.0009021759033203125,
+        "fit_Density_med2": 0.7533597946166992,
+        "score_Density_med2": 1.5619785785675049,
+        "fit_Kernel_med2": 29.41912317276001,
+        "score_Kernel_med2": 25.659274578094482,
+        "fit_OTCP": 32.208897829055786,
+        "score_OTCP": 1.602595329284668,
+        "wsc": 39.42503547668457,
+        "volume": 552.3504753112793
+      }
+    },
+    "Mahal": {
+      "params": {},
+      "score_summary": {
+        "quantiles": {
+          "0.0": 0.0036921289318045366,
+          "0.5": 1.4048011409519874,
+          "0.9": 5.90929937192217,
+          "0.95": 8.594811263479992,
+          "0.98": 13.123486202868207,
+          "0.99": 20.359208055659458,
+          "0.995": 36.00857997085989,
+          "1.0": 17347.45531078283
+        },
+        "mean": 8.299802585545997,
+        "frac_within_1e3_of_max": 8.746610688358261e-05,
+        "n_distinct_approx": 11282
+      },
+      "0.01": {
+        "coverage": 0.9911659232047582,
+        "wsc": 0.9632706602536073,
+        "threshold": 21.836826365798466,
+        "q_level": 0.9902029391182645,
+        "level_capped": false,
+        "volume": 58.544860888127786,
+        "volume_ratio": 1.0,
+        "log_volume": 4.069793313144953,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 40,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 0.9953902291781035,
+        "kappa_required": 1.224720029698461
+      },
+      "0.02": {
+        "coverage": 0.9797078632030088,
+        "wsc": 0.9247923043288151,
+        "threshold": 13.100338243505663,
+        "q_level": 0.9802309307207837,
+        "level_capped": false,
+        "volume": 27.2037177795497,
+        "volume_ratio": 1.0,
+        "log_volume": 3.3033536470333518,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 75,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 0.9964385836558085,
+        "kappa_required": 1.2266553692689492
+      },
+      "0.05": {
+        "coverage": 0.9491821919006385,
+        "wsc": 0.8469610843900306,
+        "threshold": 8.531299423526015,
+        "q_level": 0.9503149055283415,
+        "level_capped": false,
+        "volume": 14.296419201986549,
+        "volume_ratio": 1.0,
+        "log_volume": 2.6600091004536948,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 134,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 0.9997369231474522,
+        "kappa_required": 1.2327509865032071
+      },
+      "0.1": {
+        "coverage": 0.8957404005947696,
+        "wsc": 0.7442063839090511,
+        "threshold": 5.715654257025421,
+        "q_level": 0.9002799160251924,
+        "level_capped": false,
+        "volume": 7.839771818031793,
+        "volume_ratio": 1.0,
+        "log_volume": 2.059209729095879,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 290,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 0.9993033119294731,
+        "kappa_required": 1.2319490604966945
+      }
+    },
+    "Bonferroni": {
+      "params": {},
+      "score_summary": {
+        "quantiles": {
+          "0.0": 0.04443286764716956,
+          "0.5": 1.0049244458416164,
+          "0.9": 2.0959570845985365,
+          "0.95": 2.5758091511066272,
+          "0.98": 3.252839964010058,
+          "0.99": 4.0396553411337255,
+          "0.995": 5.809424183740163,
+          "1.0": 131.59639061544559
+        },
+        "mean": 1.2475716002422421,
+        "frac_within_1e3_of_max": 8.746610688358261e-05,
+        "n_distinct_approx": 11267
+      },
+      "0.01": {
+        "coverage": 0.9895040671739701,
+        "wsc": 0.9558373414954089,
+        "threshold": 3.9886597328501594,
+        "q_level": 0.9902029391182645,
+        "level_capped": false,
+        "volume": 70.03366832266718,
+        "volume_ratio": 1.1962393839570844,
+        "log_volume": 4.248976102455563,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 40,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.3657803448695445,
+        "kappa_required": 1.9684212653737223
+      },
+      "0.02": {
+        "coverage": 0.980932388699379,
+        "wsc": 0.9282903366856143,
+        "threshold": 3.285134350468729,
+        "q_level": 0.9802309307207837,
+        "level_capped": false,
+        "volume": 39.127789619296834,
+        "volume_ratio": 1.4383250824896816,
+        "log_volume": 3.6668329464923017,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 75,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.5541759126529888,
+        "kappa_required": 2.389444905200105
+      },
+      "0.05": {
+        "coverage": 0.94970698854194,
+        "wsc": 0.854831657192829,
+        "threshold": 2.574360733375636,
+        "q_level": 0.9503149055283415,
+        "level_capped": false,
+        "volume": 18.829297451943567,
+        "volume_ratio": 1.3170638875311627,
+        "log_volume": 2.9354140319328526,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 134,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.6619752112144663,
+        "kappa_required": 2.6423088134095827
+      },
+      "0.1": {
+        "coverage": 0.898364383801277,
+        "wsc": 0.7573240052470486,
+        "threshold": 2.0825132229796766,
+        "q_level": 0.9002799160251924,
+        "level_capped": false,
+        "volume": 9.967568100709078,
+        "volume_ratio": 1.271410486435749,
+        "log_volume": 2.2993366325258373,
+        "volume_ratio_se": 0.0,
+        "volume_method": "analytic",
+        "volume_ratio_mc": NaN,
+        "volume_ratio_mc_se": NaN,
+        "hits": null,
+        "n_samples": 0,
+        "kappa_used": NaN,
+        "p_hat": NaN,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 290,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.9245053959932097,
+        "kappa_required": 3.2924975480645657
+      }
+    },
+    "Density_med2": {
+      "params": {
+        "lengthscale": 0.5578872367748572
+      },
+      "score_summary": {
+        "quantiles": {
+          "0.0": 0.3959758724953485,
+          "0.5": 0.6993187114304078,
+          "0.9": 1.1093831298154555,
+          "0.95": 1.1851341810134013,
+          "0.98": 1.2274893348152416,
+          "0.99": 1.2444285409020186,
+          "0.995": 1.2526422119271963,
+          "1.0": 1.2561336876674516
+        },
+        "mean": 0.741806672323398,
+        "frac_within_1e3_of_max": 0.0034986442753433046,
+        "n_distinct_approx": 11208
+      },
+      "0.01": {
+        "coverage": 0.9914283215254089,
+        "wsc": 0.9645824223874071,
+        "threshold": 1.247345644662754,
+        "q_level": 0.9902029391182645,
+        "level_capped": false,
+        "volume": 51.19146425806343,
+        "volume_ratio": 0.8743972311401367,
+        "log_volume": 3.9355728044374882,
+        "volume_ratio_se": 0.008495809523282704,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 0.8743972311401367,
+        "volume_ratio_mc_se": 0.008495809523282704,
+        "hits": 8005,
+        "n_samples": 32768,
+        "kappa_used": 3.579294,
+        "p_hat": 0.244293212890625,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 38,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.5502838395060197,
+        "kappa_required": 2.380474810997981
+      },
+      "0.02": {
+        "coverage": 0.9794454648823581,
+        "wsc": 0.9317883690424137,
+        "threshold": 1.2271512562771687,
+        "q_level": 0.9802309307207837,
+        "level_capped": false,
+        "volume": 31.049200893501087,
+        "volume_ratio": 1.1413587343139648,
+        "log_volume": 3.4355730719291806,
+        "volume_ratio_se": 0.009215039489599869,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 1.1413587343139648,
+        "volume_ratio_mc_se": 0.009215039489599869,
+        "hits": 10449,
+        "n_samples": 32768,
+        "kappa_used": 3.579294,
+        "p_hat": 0.318878173828125,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 69,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.7764207868016766,
+        "kappa_required": 2.9198835419202847
+      },
+      "0.05": {
+        "coverage": 0.9464707425872474,
+        "wsc": 0.85002186270223,
+        "threshold": 1.1804196250699253,
+        "q_level": 0.9503149055283415,
+        "level_capped": false,
+        "volume": 17.9226858797134,
+        "volume_ratio": 1.2536485973510743,
+        "log_volume": 2.8860672779960828,
+        "volume_ratio_se": 0.009432671080924568,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 1.2536485973510743,
+        "volume_ratio_mc_se": 0.009432671080924568,
+        "hits": 11477,
+        "n_samples": 32768,
+        "kappa_used": 3.579294,
+        "p_hat": 0.350250244140625,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 118,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.9454602539597774,
+        "kappa_required": 3.346418899423509
+      },
+      "0.1": {
+        "coverage": 0.8918918918918919,
+        "wsc": 0.7490161783996502,
+        "threshold": 1.0984190553168116,
+        "q_level": 0.9002799160251924,
+        "level_capped": false,
+        "volume": 10.074947492121453,
+        "volume_ratio": 1.2851072360229492,
+        "log_volume": 2.3100518961190617,
+        "volume_ratio_se": 0.009485475396894764,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 1.2851072360229492,
+        "volume_ratio_mc_se": 0.009485475396894764,
+        "hits": 11765,
+        "n_samples": 32768,
+        "kappa_used": 3.579294,
+        "p_hat": 0.359039306640625,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 221,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 2.0347000930260117,
+        "kappa_required": 3.5792939631370984
+      }
+    },
+    "Kernel_med2": {
+      "params": {
+        "lengthscale": 0.5578872367748572,
+        "gamma": 1.6611139827202281
+      },
+      "score_summary": {
+        "quantiles": {
+          "0.0": 0.0027762371580630774,
+          "0.5": 0.009884303305383368,
+          "0.9": 0.06707202121023867,
+          "0.95": 0.13017775918477018,
+          "0.98": 0.30337896854446617,
+          "0.99": 0.5158370534747996,
+          "0.995": 0.7453158000446369,
+          "1.0": 1.032354211108297
+        },
+        "mean": 0.03435311783914418,
+        "frac_within_1e3_of_max": 0.0009621271757194088,
+        "n_distinct_approx": 9101
+      },
+      "0.01": {
+        "coverage": 0.9901163299221551,
+        "wsc": 0.9597726278968081,
+        "threshold": 0.5189437988311404,
+        "q_level": 0.9902029391182645,
+        "level_capped": false,
+        "volume": 40.70666826491691,
+        "volume_ratio": 0.6953072848307291,
+        "log_volume": 3.706391918461183,
+        "volume_ratio_se": 0.013793425308638948,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 0.6953072848307291,
+        "volume_ratio_mc_se": 0.013793425308638948,
+        "hits": 2477,
+        "n_samples": 98304,
+        "kappa_used": 27.594464,
+        "p_hat": 0.025197347005208332,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 14,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 7.9405417106557925,
+        "kappa_required": 27.594463678562086
+      },
+      "0.02": {
+        "coverage": 0.9800577276305432,
+        "wsc": 0.9239177962396152,
+        "threshold": 0.3038190250024851,
+        "q_level": 0.9802309307207837,
+        "level_capped": false,
+        "volume": 23.293557761158237,
+        "volume_ratio": 0.8562637632812499,
+        "log_volume": 3.148176831403574,
+        "volume_ratio_se": 0.016717637214011195,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 0.8562637632812499,
+        "volume_ratio_mc_se": 0.016717637214011195,
+        "hits": 2542,
+        "n_samples": 81920,
+        "kappa_used": 27.594464,
+        "p_hat": 0.0310302734375,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 19,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.4580480279865682,
+        "kappa_required": 2.1712233720928067
+      },
+      "0.05": {
+        "coverage": 0.9506691157176594,
+        "wsc": 0.8421512898994316,
+        "threshold": 0.1319641183511241,
+        "q_level": 0.9503149055283415,
+        "level_capped": false,
+        "volume": 11.774382948247313,
+        "volume_ratio": 0.8235896542968749,
+        "log_volume": 2.465926234983492,
+        "volume_ratio_se": 0.01640558597897404,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 0.8235896542968749,
+        "volume_ratio_mc_se": 0.01640558597897404,
+        "hits": 2445,
+        "n_samples": 81920,
+        "kappa_used": 27.594464,
+        "p_hat": 0.02984619140625,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 28,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.4222948933438007,
+        "kappa_required": 2.091853358260903
+      },
+      "0.1": {
+        "coverage": 0.8937286801364471,
+        "wsc": 0.7135986007870573,
+        "threshold": 0.0623737474465792,
+        "q_level": 0.9002799160251924,
+        "level_capped": false,
+        "volume": 6.124254287591864,
+        "volume_ratio": 0.7811776196732954,
+        "log_volume": 1.8122570000541902,
+        "volume_ratio_se": 0.015246094425180646,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 0.7811776196732954,
+        "volume_ratio_mc_se": 0.015246094425180646,
+        "hits": 2551,
+        "n_samples": 90112,
+        "kappa_used": 27.594464,
+        "p_hat": 0.028309215198863636,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 38,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.6393087625792184,
+        "kappa_required": 2.5884387990924385
+      }
+    },
+    "OTCP": {
+      "params": {
+        "epsilon": 0.1,
+        "eps_used": 0.1,
+        "blur_length": 0.31622776601683794,
+        "relative_epsilon": null,
+        "blur_ratio": null,
+        "scale_mode": "quantile",
+        "scale_quantile": 0.99,
+        "n_target": 4096,
+        "n_ball_points": 4096,
+        "n_shells": 64,
+        "n_fit_points": 5716,
+        "scale": 2.4685974335563596,
+        "sinkhorn_iters": 26,
+        "sinkhorn_error": 7.051669633093113e-07,
+        "converged": true,
+        "norm_median": 0.7724005713531499,
+        "norm_q99": 2.4685974335563596,
+        "norm_max": 5.4544276983123225,
+        "tail_ratio_max_over_q99": 2.2095249813390825,
+        "data_radius_median": 0.31289045384787545,
+        "data_radius_q99": 0.9999999999999999,
+        "frac_outside_ball": 0.010146955913226032,
+        "blur_over_data_radius": 1.0106660721921068
+      },
+      "score_summary": {
+        "quantiles": {
+          "0.0": 0.008239014568825104,
+          "0.5": 0.2902970268148181,
+          "0.9": 0.6580172611526071,
+          "0.95": 0.7407233859070744,
+          "0.98": 0.8117015578963722,
+          "0.99": 0.8433852899709278,
+          "0.995": 0.8794802199526549,
+          "1.0": 0.9931054894585007
+        },
+        "mean": 0.33826831829988924,
+        "frac_within_1e3_of_max": 8.746610688358261e-05,
+        "n_distinct_approx": 11199
+      },
+      "0.01": {
+        "coverage": 0.9914283215254089,
+        "wsc": 0.965019676432007,
+        "threshold": 0.8508124891181846,
+        "q_level": 0.9902029391182645,
+        "level_capped": false,
+        "volume": 53.62184976402837,
+        "volume_ratio": 0.9159104479980469,
+        "log_volume": 3.9819566298634426,
+        "volume_ratio_se": 0.009940239191153924,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 0.9159104479980469,
+        "volume_ratio_mc_se": 0.009940239191153924,
+        "hits": 6743,
+        "n_samples": 32768,
+        "kappa_used": 4.45092,
+        "p_hat": 0.205780029296875,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 37,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.6869429684288844,
+        "kappa_required": 2.702074762019223
+      },
+      "0.02": {
+        "coverage": 0.9791830665617074,
+        "wsc": 0.9291648447748142,
+        "threshold": 0.8089006279179672,
+        "q_level": 0.9802309307207837,
+        "level_capped": false,
+        "volume": 31.31980591942009,
+        "volume_ratio": 1.1513060888671875,
+        "log_volume": 3.444250674405449,
+        "volume_ratio_se": 0.010767180565565176,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 1.1513060888671875,
+        "volume_ratio_mc_se": 0.010767180565565176,
+        "hits": 8476,
+        "n_samples": 32768,
+        "kappa_used": 4.45092,
+        "p_hat": 0.2586669921875,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 59,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 2.3528922001051833,
+        "kappa_required": 4.450920175848432
+      },
+      "0.05": {
+        "coverage": 0.9479576664042684,
+        "wsc": 0.8539571491036292,
+        "threshold": 0.7367564985282198,
+        "q_level": 0.9503149055283415,
+        "level_capped": false,
+        "volume": 16.17409500149171,
+        "volume_ratio": 1.131338887939453,
+        "log_volume": 2.7834108883729445,
+        "volume_ratio_se": 0.010705649798785652,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 1.131338887939453,
+        "volume_ratio_mc_se": 0.010705649798785652,
+        "hits": 8329,
+        "n_samples": 32768,
+        "kappa_used": 4.45092,
+        "p_hat": 0.254180908203125,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 93,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 2.0652732856767084,
+        "kappa_required": 3.6602694050654883
+      },
+      "0.1": {
+        "coverage": 0.8939036123502143,
+        "wsc": 0.7341495408832531,
+        "threshold": 0.6483006511274121,
+        "q_level": 0.9002799160251924,
+        "level_capped": false,
+        "volume": 9.027041915817948,
+        "volume_ratio": 1.1514419201660155,
+        "log_volume": 2.200224729688194,
+        "volume_ratio_se": 0.01076759406853884,
+        "volume_method": "mc_ratio",
+        "volume_ratio_mc": 1.1514419201660155,
+        "volume_ratio_mc_se": 0.01076759406853884,
+        "hits": 8477,
+        "n_samples": 32768,
+        "kappa_used": 4.45092,
+        "p_hat": 0.258697509765625,
+        "zero_hits": false,
+        "saturated": false,
+        "leaks": 0,
+        "n_outside": 162,
+        "leak_frac": 0.0,
+        "reach_over_qmahal": 1.87819712445713,
+        "kappa_required": 3.1743771000251773
+      }
+    },
+    "volume_meta": {
+      "kappa_default": 3.0,
+      "target_rel_se": 0.02,
+      "block_size": 8192,
+      "max_samples": 400000,
+      "d": 3,
+      "kappa_per_method": {
+        "Mahal": 3.0,
+        "Bonferroni": 3.0,
+        "Density_med2": 3.5792939631370984,
+        "Kernel_med2": 27.594463678562086,
+        "OTCP": 4.450920175848432
+      },
+      "per_alpha": {
+        "0.01": {
+          "q_mahal": 21.836826365798466,
+          "log_V_mahal": 4.069793313144953,
+          "n_samples": 163840,
+          "mahal_self_check": 0.9907534936523438,
+          "groups": {
+            "3.579294": {
+              "methods": [
+                "Density_med2"
+              ],
+              "n_samples": 32768,
+              "q_prop": 51.09610188438893,
+              "mahal_self_check": 0.9975010012207031
+            },
+            "4.45092": {
+              "methods": [
+                "OTCP"
+              ],
+              "n_samples": 32768,
+              "q_prop": 59.08665163953243,
+              "mahal_self_check": 0.9907534936523438
+            },
+            "27.594464": {
+              "methods": [
+                "Kernel_med2"
+              ],
+              "n_samples": 98304,
+              "q_prop": 199.40566672240274,
+              "mahal_self_check": 1.0063288720703125
+            }
+          }
+        },
+        "0.02": {
+          "q_mahal": 13.100338243505663,
+          "log_V_mahal": 3.3033536470333518,
+          "n_samples": 147456,
+          "mahal_self_check": 0.9839285808593748,
+          "groups": {
+            "3.579294": {
+              "methods": [
+                "Density_med2"
+              ],
+              "n_samples": 32768,
+              "q_prop": 30.65354856960902,
+              "mahal_self_check": 1.0026348762817383
+            },
+            "4.45092": {
+              "methods": [
+                "OTCP"
+              ],
+              "n_samples": 32768,
+              "q_prop": 35.44723528902593,
+              "mahal_self_check": 1.0066457556152344
+            },
+            "27.594464": {
+              "methods": [
+                "Kernel_med2"
+              ],
+              "n_samples": 81920,
+              "q_prop": 119.62735051219146,
+              "mahal_self_check": 0.9839285808593748
+            }
+          }
+        },
+        "0.05": {
+          "q_mahal": 8.531299423526015,
+          "log_V_mahal": 2.6600091004536948,
+          "n_samples": 147456,
+          "mahal_self_check": 1.0099533790283204,
+          "groups": {
+            "3.579294": {
+              "methods": [
+                "Density_med2"
+              ],
+              "n_samples": 32768,
+              "q_prop": 19.962431227344446,
+              "mahal_self_check": 1.0099533790283204
+            },
+            "4.45092": {
+              "methods": [
+                "OTCP"
+              ],
+              "n_samples": 32768,
+              "q_prop": 23.084211442920154,
+              "mahal_self_check": 1.0002616845703125
+            },
+            "27.594464": {
+              "methods": [
+                "Kernel_med2"
+              ],
+              "n_samples": 81920,
+              "q_prop": 77.90461036138073,
+              "mahal_self_check": 1.003465676953125
+            }
+          }
+        },
+        "0.1": {
+          "q_mahal": 5.715654257025421,
+          "log_V_mahal": 2.059209729095879,
+          "n_samples": 155648,
+          "mahal_self_check": 1.0307502421874999,
+          "groups": {
+            "3.579294": {
+              "methods": [
+                "Density_med2"
+              ],
+              "n_samples": 32768,
+              "q_prop": 13.374088677571141,
+              "mahal_self_check": 1.000341017211914
+            },
+            "4.45092": {
+              "methods": [
+                "OTCP"
+              ],
+              "n_samples": 32768,
+              "q_prop": 15.465565660485247,
+              "mahal_self_check": 1.0153389587402344
+            },
+            "27.594464": {
+              "methods": [
+                "Kernel_med2"
+              ],
+              "n_samples": 90112,
+              "q_prop": 52.19320009165714,
+              "mahal_self_check": 1.0307502421874999
+            }
+          }
+        }
+      }
+    }
+  },
+  "elapsed_s": 690.0659883022308
+}
